@@ -1,0 +1,16 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "It Sux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "HaLu",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.1.1",
+    "opusscript": "0.0.7",
+    "ytdl-core": "^2.1.0"
+  }
+}
