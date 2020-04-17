@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const { Client, MessageEmbed } = require('discord.js');
 const bot = new Discord.Client();
-const token ;
 const PREFIX = 'dui ';
 const fs = require("fs");
 const ytdl = require("ytdl-core");
