@@ -143,6 +143,95 @@ bot.on('message', msg=>{
                 update();
             }
         break;
+        case 'house':
+        case 'h':
+            switch (after[1]){
+            	case 'l':
+            	case 'living room':
+            	case '1':
+            	    if(Client.userdata [mas.author.username].livingroom.sofa ==1){
+            	    	string id1 = 'Sofa';
+            	    }else{
+            	    	string id1 = 'Nothing';
+            	    }
+            	    if(Client.userdata [mas.author.username].livingroom.table ==1){
+            	    	string id2 = 'Table';
+            	    }else{
+            	    	string id2 = 'Nothing';
+            	    }
+            	    if(Client.userdata [mas.author.username].livingroom.tv ==1){
+            	    	string id3 = 'Tv';
+            	    }else{
+            	    	string id3 = 'Nothing';
+            	    }
+            	    if(Client.userdata [mas.author.username].livingroom.bookcase ==1){
+            	    	string id4 = 'Bookcase';
+            	    }else{
+            	    	string id4 = 'Nothing';
+            	    }
+            	    const embedd = new MessageEmbed()
+                    .setTitle('Living Room')
+                    .setDescription('This is your living room')
+                    .addField(' ',id1)
+                    .addField(' ',id2)
+                    .addField(' ',id3)
+                    .addField(' ',id4)
+                    .setColor(0x00FF0F)
+                    msg.channel.send(embedd);
+            	break;
+            	case 'b':
+            	case 'bath room':
+            	case '2':
+            	    if(Client.userdata [mas.author.username].bathroom.sink ==1){
+            	    	string id1 = 'Sink';
+            	    }else{
+            	    	string id1 = 'Nothing';
+            	    }
+            	    if(Client.userdata [mas.author.username].bathroom.toilet ==1){
+            	    	string id2 = 'Toilet';
+            	    }else{
+            	    	string id2 = 'Nothing';
+            	    }
+            	    if(Client.userdata [mas.author.username].bathroom.shower ==1){
+            	    	string id3 = 'Shower';
+            	    }else{
+            	    	string id3 = 'Nothing';
+            	    }
+            	    if(Client.userdata [mas.author.username].bathroom.bathtub ==1){
+            	    	string id4 = 'Bathtub';
+            	    }else{
+            	    	string id4 = 'Nothing';
+            	    }
+            	break;
+            	case 'be':
+            	case 'bed room':
+            	case '4':
+            	    if(Client.userdata [mas.author.username].bedroom.bed ==1){
+            	    	string id1 = 'Bed';
+            	    }else{
+            	    	string id1 = 'Nothing';
+            	    }
+            	    if(Client.userdata [mas.author.username].bedroom.wardrobe ==1){
+            	    	string id2 = 'Wardrobe';
+            	    }else{
+            	    	string id2 = 'Nothing';
+            	    }
+            	    if(Client.userdata [mas.author.username].bedroom.capinetnmirror ==1){
+            	    	string id3 = 'Capinet & Mirror';
+            	    }else{
+            	    	string id3 = 'Nothing';
+            	    }
+            	    if(Client.userdata [mas.author.username].bedroom.tv ==1){
+            	    	string id4 = 'Tv';
+            	    }else{
+            	    	string id4 = 'Nothing';
+            	    }
+            	break;
+            	default:
+            	msg.reply('Hãy nhập tên phòng');
+            	break;
+            }
+            break;
         case 'avatar':
         case 'avt':
             msg.reply(msg.author.displayAvatarURL());
