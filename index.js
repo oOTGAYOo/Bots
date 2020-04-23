@@ -34,12 +34,13 @@ bot.on('message', msg=>{
                             msg.reply('Bạng đang trong ca làm việc. Hãy đợi '+Client.userdata [msg.author.username].work.WorkTimer+' s');
                         }else{
                             var rmoney = Math.floor(Math.random() * 30)+12;
+                            msg.reply('Bạng bắt đầu ca làm việc!');
                             Client.userdata [msg.author.username].work.WorkTimer=30;
                             var workdone = setInterval(() => {
                                 Client.userdata [msg.author.username].work.WorkTimer -= 1;
                                 update();
                                 if(Client.userdata [msg.author.username].work.WorkTimer==0){
-                                    Client.userdata[msg.author.username].nowmoney =+ rmoney;
+                                    Client.userdata[msg.author.username].nowmoney += rmoney;
                                     update();
                                     msg.reply('Bạng đã hoàn thành công việc!');
                                     const embeds = new MessageEmbed()
@@ -54,19 +55,20 @@ bot.on('message', msg=>{
                         break;
                     case 2:
                         if(Client.userdata [msg.author.username].work.WorkTimer >1){
-                            msg.reply('You are too tired to work now.Pls wait '+Client.userdata [msg.author.username].work.WorkTimer+' seconds');                          
+                            msg.reply('Bạng đang trong ca làm việc. Hãy đợi '+Client.userdata [msg.author.username].work.WorkTimer+' seconds');                          
                         }else{
                             var rmoney = Math.floor(Math.random() * 60)+24;
+                            msg.reply('Bạng bắt đầu ca làm việc!');
                             Client.userdata [msg.author.username].work.WorkTimer=60;
                             var workdone = setInterval(() => {
                                 Client.userdata [msg.author.username].work.WorkTimer -= 1;
                                 update();
                                 if(Client.userdata [msg.author.username].work.WorkTimer==0){                                   
-                                    Client.userdata[msg.author.username].nowmoney =+ rmoney;
+                                    Client.userdata[msg.author.username].nowmoney += rmoney;
                                     update();
-                                    msg.reply('You finish your work:');
+                                    msg.reply('Bạng đã hoàn thành công việc!');
                                     const embeds = new MessageEmbed()
-                                    .setTitle('Earned:')
+                                    .setTitle('Nhận được:')
                                     .setDescription(msg.author.username +': '+rmoney + ' :dollar:')
                                     .setColor(0x00FFE8);
                                     msg.channel.send(embeds);                       
@@ -77,19 +79,20 @@ bot.on('message', msg=>{
                         break;
                     case 3:
                         if(Client.userdata [msg.author.username].work.WorkTimer >1){
-                            msg.reply('You are too tired to work now.Pls wait '+Client.userdata [msg.author.username].work.WorkTimer+' secondss');                   
+                            msg.reply('Bạng đang trong ca làm việc. Hãy đợi '+Client.userdata [msg.author.username].work.WorkTimer+' secondss');                   
                         }else{
                             var rmoney = Math.floor(Math.random() * 10)+4;
+                            msg.reply('Bạng bắt đầu ca làm việc!');
                             Client.userdata [msg.author.username].work.WorkTimer=10;
                             var workdone = setInterval(() => {
                                 Client.userdata [msg.author.username].work.WorkTimer -= 1;
                                 update();
                                 if(Client.userdata [msg.author.username].work.WorkTimer==0){                                   
-                                    Client.userdata[msg.author.username].nowmoney =+ rmoney;
+                                    Client.userdata[msg.author.username].nowmoney += rmoney;
                                     update();
-                                    msg.reply('You finish your work:');
+                                    msg.reply('Bạng đã hoàn thành công việc!');
                                     const embeds = new MessageEmbed()
-                                    .setTitle('Earned:')
+                                    .setTitle('Nhận được:')
                                     .setDescription(msg.author.username +': '+rmoney + ' :dollar:')
                                     .setColor(0x00FFE8);
                                     msg.channel.send(embeds);                    
@@ -100,19 +103,20 @@ bot.on('message', msg=>{
                         break;
                     case 4:
                         if(Client.userdata [msg.author.username].work.WorkTimer >0){
-                            msg.reply('You are too tired to work now.Pls wait '+Client.userdata [msg.author.username].work.WorkTimer+' seconds');
+                            msg.reply('Bạng đang trong ca làm việc. Hãy đợi '+Client.userdata [msg.author.username].work.WorkTimer+' seconds');
                         }else{
                             var rmoney = Math.floor(Math.random() * 40)+16;
+                            msg.reply('Bạng bắt đầu ca làm việc!');
                             Client.userdata [msg.author.username].work.WorkTimer = 40;
                             var workdone = setInterval(() => {
                                 Client.userdata [msg.author.username].work.WorkTimer -= 1;
                                 update();
                                 if(Client.userdata [msg.author.username].work.WorkTimer==0){
-                                        Client.userdata[msg.author.username].nowmoney =+ rmoney;
+                                        Client.userdata[msg.author.username].nowmoney += rmoney;
                                         update();
-                                        msg.reply('You finish your work:');
+                                        msg.reply('Bạng đã hoàn thành công việc!');
                                         const embeds = new MessageEmbed()
-                                        .setTitle('Earned:')
+                                        .setTitle('Nhận được:')
                                         .setDescription(msg.author.username +': '+rmoney + ' :dollar:')
                                         .setColor(0x00FFE8);
                                         msg.channel.send(embeds);
