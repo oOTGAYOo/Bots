@@ -136,8 +136,8 @@ bot.on('message', msg=>{
             }else{
             let _msg = Client.userdata[msg.author.username].nowmoney;
             const embed = new MessageEmbed()
-                .setTitle('Bank:')
-                .addField(msg.author.username+' Balance:', _msg)
+                .setTitle('Ngân hàng:')
+                .addField('Tài khoản:'msg.author.username+':', _msg)
                 .setColor(0x00FFE8);
                 msg.channel.send(embed);
                 update();
@@ -170,8 +170,8 @@ bot.on('message', msg=>{
             	    	string id4 = 'Nothing';
             	    }
             	    const embedd = new MessageEmbed()
-                    .setTitle('Living Room')
-                    .setDescription('This is your living room')
+                    .setTitle('LivingRoom')
+                    .setDescription('This is your livingroom')
                     .addField(' ',id1)
                     .addField(' ',id2)
                     .addField(' ',id3)
@@ -202,7 +202,49 @@ bot.on('message', msg=>{
             	    }else{
             	    	string id4 = 'Nothing';
             	    }
+                    const embedd = new MessageEmbed()
+                    .setTitle('BathRoom')
+                    .setDescription('This is your bathroom')
+                    .addField(' ',id1)
+                    .addField(' ',id2)
+                    .addField(' ',id3)
+                    .addField(' ',id4)
+                    .setColor(0x00FF0F)
+                    msg.channel.send(embedd);
             	break;
+                case '3':
+                case 'k':
+                case 'kitchen':
+                    if(Client.userdata [mas.author.username].bathroom.sink ==1){
+            	    	string id1 = 'Sink';
+            	    }else{
+            	    	string id1 = 'Nothing';
+            	    }
+            	    if(Client.userdata [mas.author.username].bathroom.toilet ==1){
+            	    	string id2 = 'Toilet';
+            	    }else{
+            	    	string id2 = 'Nothing';
+            	    }
+            	    if(Client.userdata [mas.author.username].bathroom.shower ==1){
+            	    	string id3 = 'Shower';
+            	    }else{
+            	    	string id3 = 'Nothing';
+            	    }
+            	    if(Client.userdata [mas.author.username].bathroom.bathtub ==1){
+            	    	string id4 = 'Bathtub';
+            	    }else{
+            	    	string id4 = 'Nothing';
+            	    }
+                    const embedd = new MessageEmbed()
+                    .setTitle('BathRoom')
+                    .setDescription('This is your bathroom')
+                    .addField(' ',id1)
+                    .addField(' ',id2)
+                    .addField(' ',id3)
+                    .addField(' ',id4)
+                    .setColor(0x00FF0F)
+                    msg.channel.send(embedd);
+                    break;
             	case 'be':
             	case 'bed room':
             	case '4':
@@ -226,6 +268,15 @@ bot.on('message', msg=>{
             	    }else{
             	    	string id4 = 'Nothing';
             	    }
+                    const embedd = new MessageEmbed()
+                    .setTitle('BedRoom')
+                    .setDescription('This is your bedroom')
+                    .addField(' ',id1)
+                    .addField(' ',id2)
+                    .addField(' ',id3)
+                    .addField(' ',id4)
+                    .setColor(0x00FF0F)
+                    msg.channel.send(embedd);
             	break;
             	default:
             	msg.reply('Hãy nhập tên phòng');
