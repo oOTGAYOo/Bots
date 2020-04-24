@@ -202,7 +202,7 @@ bot.on('message', msg=>{
             	    }else{
             	    	var id4 = 'Nothing';
             	    }
-                    const embedd = new MessageEmbed()
+                    const embede = new MessageEmbed()
                     .setTitle('BathRoom')
                     .setDescription('This is your bathroom')
                     .addField(' ',id1)
@@ -210,7 +210,7 @@ bot.on('message', msg=>{
                     .addField(' ',id3)
                     .addField(' ',id4)
                     .setColor(0x00FF0F)
-                    msg.channel.send(embedd);
+                    msg.channel.send(embede);
             	break;
                 case '3':
                 case 'k':
@@ -235,7 +235,7 @@ bot.on('message', msg=>{
             	    }else{
             	    	var id4 = 'Nothing';
             	    }
-                    const embedd = new MessageEmbed()
+                    const embedf = new MessageEmbed()
                     .setTitle('BathRoom')
                     .setDescription('This is your bathroom')
                     .addField(' ',id1)
@@ -243,7 +243,7 @@ bot.on('message', msg=>{
                     .addField(' ',id3)
                     .addField(' ',id4)
                     .setColor(0x00FF0F)
-                    msg.channel.send(embedd);
+                    msg.channel.send(embedf);
                     break;
             	case 'be':
             	case 'bed room':
@@ -268,7 +268,7 @@ bot.on('message', msg=>{
             	    }else{
             	    	var id4 = 'Nothing';
             	    }
-                    const embedd = new MessageEmbed()
+                    const embedg = new MessageEmbed()
                     .setTitle('BedRoom')
                     .setDescription('This is your bedroom')
                     .addField(' ',id1)
@@ -276,7 +276,7 @@ bot.on('message', msg=>{
                     .addField(' ',id3)
                     .addField(' ',id4)
                     .setColor(0x00FF0F)
-                    msg.channel.send(embedd);
+                    msg.channel.send(embedg);
             	break;
             	default:
             	msg.reply('Hãy nhập tên phòng');
